@@ -1,4 +1,4 @@
-package Client;
+package ClientAWS;
 
 import java.io.File;
 import java.net.InetAddress;
@@ -6,7 +6,7 @@ import java.net.InetAddress;
 import com.turn.ttorrent.client.Client;
 import com.turn.ttorrent.client.SharedTorrent;
 
-public class BitTorrentClient {
+public class BitTorrentClientAWS {
 
 	public static void main(String[] args) {
 
@@ -20,8 +20,8 @@ public class BitTorrentClient {
 			// Load the torrent from the torrent file and use the given
 			// output directory. Partials downloads are automatically recovered.
 			SharedTorrent.fromFile(
-			new File("./client1/Black Label XXL.torrent"),
-			new File("./client1Files")));
+			new File("./clientAWS/Black Label XXL.torrent"),
+			new File("./clientAWSFiles")));
 
 			// You can optionally set download/upload rate limits
 			// in kB/second. Setting a limit to 0.0 disables rate
@@ -40,7 +40,6 @@ public class BitTorrentClient {
 			// Downloading and seeding is done in background threads.
 			// To wait for this process to finish, call:
 			//client.waitForCompletion();
-			System.out.println("AQUI");
 			// At any time you can call client.stop() to interrupt the download.
 		}
 		catch(Exception e) {
