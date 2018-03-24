@@ -29,9 +29,9 @@ public class BitTorrentTracker {
 
 			// Once done, you just have to start the tracker's main operation loop:
 			tracker.start();
-			
-			while(true)
+			while(true) {
 				tracker.getTrackedTorrents();
+			}
 
 			// You can stop the tracker when you're done with:
 			//tracker.stop();
