@@ -20,7 +20,7 @@ public class BitTorrentClient {
 			// Load the torrent from the torrent file and use the given
 			// output directory. Partials downloads are automatically recovered.
 			SharedTorrent.fromFile(
-			new File("./clientDownload/Black Label XXL.torrent"),
+			new File("./localTorrent/Black Label XXL.torrent"),
 			new File("./clientDownloadFiles")));
 
 			// You can optionally set download/upload rate limits

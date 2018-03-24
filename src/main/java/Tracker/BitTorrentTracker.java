@@ -23,13 +23,15 @@ public class BitTorrentTracker {
 				}
 			};
 
-			for (File f : new File("./tracker").listFiles(filter)) {
+			for (File f : new File("./localTorrent").listFiles(filter)) {
 				tracker.announce(TrackedTorrent.load(f));
 			}
 
 			// Once done, you just have to start the tracker's main operation loop:
 			tracker.start();
-			tracker.getTrackedTorrents();
+			
+			while(true)
+				tracker.getTrackedTorrents();
 
 			// You can stop the tracker when you're done with:
 			//tracker.stop();

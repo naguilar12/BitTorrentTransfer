@@ -20,7 +20,7 @@ public class BitTorrentClientAWS {
 			// Load the torrent from the torrent file and use the given
 			// output directory. Partials downloads are automatically recovered.
 			SharedTorrent.fromFile(
-			new File("./clientAWS/Black Label XXL.torrent"),
+			new File("./localTorrent/Black Label XXL.torrent"),
 			new File("./clientAWSFiles")));
 
 			// You can optionally set download/upload rate limits
@@ -31,7 +31,7 @@ public class BitTorrentClientAWS {
 
 			// At this point, can you either call download() to download the torrent and
 			// stop immediately after...
-			//client.download();
+			client.download();
 
 			// Or call client.share(...) with a seed time in seconds:
 			client.share(3600);
