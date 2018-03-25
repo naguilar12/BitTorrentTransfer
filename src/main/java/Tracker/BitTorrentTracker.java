@@ -23,7 +23,7 @@ public class BitTorrentTracker {
 				}
 			};
 
-			for (File f : new File("./localTorrent").listFiles(filter)) {
+			for (File f : new File("./filesTorrent").listFiles(filter)) {
 				tracker.announce(TrackedTorrent.load(f));
 			}
 
